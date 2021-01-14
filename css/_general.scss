@@ -1,0 +1,157 @@
+//-------------//
+//---Mixings---//
+//-------------//
+@mixin imagePosition {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin underline {
+  &::after {
+    display: block;
+    height: 2px;
+    background-color: $purple;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+//----------//
+//---vars---//
+//----------//
+
+// --- colors ---//
+$white: #f2f2f2;
+$black: #0d0d0d;
+$yellow: #f2cc0f;
+$purple: #9453a6;
+$green: #8cbf3f;
+
+//--- other ---//
+$letter-spacing: 7px;
+
+//----------------//
+//---formatting---//
+//----------------//
+
+body > * {
+  flex-grow: 0;
+}
+body > nav + .container {
+  flex-grow: 1;
+}
+section {
+  padding-bottom: 200px;
+}
+
+.bgimage {
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
+    url("../../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  @include flex();
+
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+body > * {
+  flex-grow: 0;
+}
+body > nav + .container {
+  flex-grow: 1;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  color: $white;
+  font-family: "Pattaya";
+  font-size: 8vw;
+
+  letter-spacing: $letter-spacing;
+  padding: 0px 10% 0px 10%;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+h2 {
+  padding-top: 2vh;
+  color: $white;
+  font-family: "Pattaya";
+  font-size: 5vw;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 42px;
+  &::after {
+    display: block;
+    height: 2px;
+    background-color: $purple;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  font-family: "Pattaya";
+  color: $black;
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-top: 50px;
+}
+h5 {
+  font-family: "Henny Penny";
+  color: $white;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1200px) {
+  h3 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  // .bgimage {
+  //   padding-bottom: 50vh;
+  // }
+}

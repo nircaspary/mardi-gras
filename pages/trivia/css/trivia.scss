@@ -1,0 +1,95 @@
+@import "../../../css/general";
+@import "../../../css/style.scss";
+//FOR JS
+.correct-ans {
+  background-color: green;
+}
+.wrong-ans {
+  background-color: red;
+}
+.display-toggle {
+  display: none;
+}
+.disable-answer {
+  pointer-events: none;
+}
+//END FOR JS
+.trivia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.game {
+  padding: 30px;
+  border: 1px solid $black;
+  border-radius: 5px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.game-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 40px 0;
+}
+.game-con > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid black;
+  width: 80%;
+  border-radius: 10px;
+  height: 80%;
+}
+.section-right {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid $black;
+  justify-content: center;
+}
+.section-right > div {
+  font-size: 3vw;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  height: 50%;
+}
+small {
+  display: none;
+}
+.end-game > h2 {
+  color: $black;
+}
+@media only screen and (max-width: 1200px) {
+  .game-con {
+    flex-direction: column;
+  }
+  .answer {
+    font-size: 1.8vh;
+  }
+  .game {
+    width: 90%;
+  }
+  h3 {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}

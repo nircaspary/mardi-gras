@@ -1,0 +1,97 @@
+//navbar
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  transition: all 0.5s;
+  background-color: rgba(250, 235, 215, 0);
+
+  .navbar {
+    width: 100%;
+    position: absolute;
+    @include flex();
+    justify-content: space-evenly;
+
+    .logo {
+      width: 40%;
+      text-align: left;
+    }
+    .logo-img {
+      width: auto;
+      height: 120px;
+      text-align: left;
+    }
+
+    .item a {
+      text-decoration: none;
+      color: $white;
+      font-size: 20px;
+      float: left;
+    }
+    .item {
+      text-transform: uppercase;
+      transition: all 0.5s;
+      &:hover {
+        border-bottom: 3px solid $yellow;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.hamburger {
+  display: none;
+}
+
+//MEDIA QUERIES
+@media only screen and (max-width: 1200px) {
+  .item,
+  .logo {
+    display: none;
+  }
+  .hamburger {
+    z-index: 1;
+    position: fixed;
+    cursor: pointer;
+    display: inline;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.493);
+    padding: 5px;
+    border-radius: 5px;
+    top: 30px;
+    right: 30px;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .navbar {
+    z-index: -1;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .item {
+      z-index: 2;
+      padding-top: 35px;
+      letter-spacing: 5px;
+    }
+  }
+  body {
+    max-height: 100vh;
+  }
+
+  //for js
+  .toggle-nav-display {
+    display: none;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right, $black, $purple);
+  }
+  .toggle-items-display {
+    display: flex;
+  }
+  .body-overflow {
+    overflow: hidden;
+  }
+}

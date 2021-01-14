@@ -1,0 +1,76 @@
+// --- colors ---//
+$white: #f2f2f2;
+$black: #0d0d0d;
+$yellow: #f2cc0f;
+$purple: #9453a6;
+$green: #8cbf3f;
+
+.funders {
+  height: 100%;
+}
+.funders-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 30px 0px;
+  margin: 0px 100px;
+}
+
+.funder > img {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.funder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 350px;
+  text-align: center;
+  transition: all 0.8s;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.funder > h5 {
+  color: $black;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  max-width: 80%;
+}
+.funder > a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .funders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .funder {
+      width: 90%;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .funders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .funder {
+      width: 95%;
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  .funders-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 50px;
+    .funder {
+      width: 100%;
+    }
+  }
+}

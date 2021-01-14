@@ -1,0 +1,73 @@
+@import "../../../css/style.scss";
+.contact {
+  height: 100%;
+  padding-bottom: 200px;
+  display: flex;
+}
+form {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+}
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  width: 50%;
+}
+.contact-col input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.contact-col label {
+  color: #777;
+  margin-bottom: 5px;
+}
+.contact-col input:focus {
+  outline: 0;
+  border-color: #777;
+}
+#message {
+  height: 150px;
+  text-align: center;
+}
+.form #submit {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 16px;
+
+  width: 100%;
+}
+label.error {
+  color: red;
+}
+//right side of the page
+.contact-img {
+  width: 50%;
+  background-image: url("../../Img/contact.png");
+  background-size: cover;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1200px) {
+  .contact-img {
+    display: none;
+    visibility: hidden;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    width: 90%;
+  }
+}

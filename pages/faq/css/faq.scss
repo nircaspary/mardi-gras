@@ -1,0 +1,57 @@
+@import "../../../css/general";
+@import "../../../css/style.scss";
+
+.card {
+  margin: 0 15%;
+  background-color: #35353513;
+
+  border: 1px solid $black;
+  margin-bottom: 4px;
+}
+#accordion {
+  padding-top: 20px;
+  height: 100%;
+}
+.btn {
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.06);
+    color: $green;
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.card-body {
+  color: $black;
+  background-color: $white;
+}
+.trivia-link {
+  text-align: center;
+
+  letter-spacing: 2px;
+  padding-top: 30px;
+}
+.trivia {
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 36px;
+  font-weight: bold;
+  &:hover {
+    transform: scale(1.06);
+    color: $green;
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+  &:active {
+    transform: scale(1.06);
+    color: $green;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+}
